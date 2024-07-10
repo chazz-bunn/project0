@@ -1,4 +1,5 @@
 from modules.print_text import print_text
+from modules.format_text import format_text
 
 def func(dict):
     print_text("\nDetermined not to lose sight of Hamilton, Pete decided to follow the pig. He sprinted through the forest, dodging trees and leaping over fallen branches. The chase led him deeper into the woods, where the canopy grew thicker and the light dimmer. He could hear Hamilton's grunts up ahead and pushed himself to run faster, faster, faster.\n")
@@ -35,6 +36,7 @@ def func(dict):
     ]
     while True:
         choice = input()
+        choice = format_text(choice)
         if choice in choice_one_choices:
             return "cooperate"
         elif choice in choice_two_choices:

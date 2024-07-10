@@ -1,4 +1,5 @@
 from modules.print_text import print_text
+from modules.format_text import format_text
 
 def func(dict):
     print_text("\nPete decided to boost the robot's self-esteem by letting it win, but only just. He made a few subtle mistakes, allowing the robot to capture his pieces and eventually declare victory. The robot's eyes glowed with joy as it made the final move.\n")
@@ -29,6 +30,7 @@ def func(dict):
     ]
     while True:
         choice = input()
+        choice = format_text(choice)
         if choice in choice_one_choices:
             return "represent_himself"
         elif choice in choice_two_choices:

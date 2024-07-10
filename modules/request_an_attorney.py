@@ -1,4 +1,5 @@
 from modules.print_text import print_text
+from modules.format_text import format_text
 
 def func(dict):
     print_text('\nPete decided to play it safe and requested an attorney. Moments later, a very cocksure owl entered the room, carrying a massive law book. The courtroom fell silent as the owl made his way to the defense table, his feathers ruffling with confidence. Judge Hamilton gave the owl nasty glances and growled, "Dr. Woo."\n')
@@ -24,6 +25,7 @@ def func(dict):
     ]
     while True:
         choice = input()
+        choice = format_text(choice)
         if choice in choice_one_choices:
             return "run_for_sewers"
         elif choice in choice_two_choices:

@@ -1,4 +1,5 @@
-from modules.print_text import print_text 
+from modules.print_text import print_text
+from modules.format_text import format_text
 
 def func(dict):
     dict["games_played"] += 1
@@ -24,6 +25,7 @@ def func(dict):
     ]
     while True:
         choice = input()
+        choice = format_text(choice)
         if choice in choice_one_choices:
             return "forget_about_it"
         elif choice in choice_two_choices:
