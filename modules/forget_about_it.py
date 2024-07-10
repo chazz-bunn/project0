@@ -15,4 +15,4 @@ def func(dict):
 
     print_text('\n"Hamilton! There you are, you sneaky little truffler!” Pete exclaimed, relief flooding through him. “I love you, pig.” There was a rustling in the distance, perhaps another bird, and Hamilton dashed off to investigate.\n')
 
-    return "end"
+    return "follow_the_pig"

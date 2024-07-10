@@ -24,7 +24,7 @@ def func(dict):
         "request an attorney",
         "request attorney",
         "request",
-        "have attorney"
+        "have attorney",
         "attorney"
     ]
     while True:

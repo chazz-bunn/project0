@@ -20,9 +20,21 @@ class Game:
         while True:
             current_module = getattr(modules, current_module).func(self.game_dict)
             if current_module == "end":
-                current_module = "prologue"
                 modules.end.func()
-                break
+                current_module = "prologue"
+                print("\nNew Game: yes or no?")
+                break_flag = False
+                while True:
+                    choice = input()
+                    if choice in ["yes", "y", "Yes", "YES"]:
+                        break
+                    elif choice in ["no", "n", "No", "NO"]:
+                        break_flag = True
+                        break
+                    else:
+                        print("Input either yes or no")
+                if break_flag:
+                    break
             self.save_game(current_module)
         self.save_game(current_module)
     

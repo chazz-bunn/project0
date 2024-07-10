@@ -14,4 +14,6 @@ def func(dict):
     print_text("\nJust before he struck the ground, Pete awoke with a start. He found himself back in the forest, with Hamilton's wet snout nudging his face and his tail wagging happily.\n")
 
     print_text('\n"Oh," Pete murmured, relief washing over him. “I guess I fell asleep when I bonked my head on that statue. I went to the most fantastical place, and you were there, Hamilton.” He hugged Hamilton tightly, grateful to be back in the familiar woods with his beloved truffle-hunting pig. “Let’s go home.”\n')
+
+    return "end"
                
