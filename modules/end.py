@@ -1,3 +1,5 @@
+from modules.print_text import print_text
+
 def func():
-    print("The End")
+    print_text("\nThe End\n")
     return "end"
