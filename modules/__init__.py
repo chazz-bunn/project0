@@ -5,4 +5,8 @@ from modules.refuse_their_demands import func
 from modules.cooperate import func
 from modules.school_this_fool import func
 from modules.go_easy_on_them import func
+from modules.represent_himself import func
+from modules.request_an_attorney import func
+from modules.run_for_sewers import func
+from modules.face_the_army import func
 from modules.end import func

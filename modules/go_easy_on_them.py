@@ -30,8 +30,8 @@ def func(dict):
     while True:
         choice = input()
         if choice in choice_one_choices:
-            pass
+            return "represent_himself"
         elif choice in choice_two_choices:
-            pass
+            return "request_an_attorney"
         else:
             print_text("\nPick one of the choices.\nShould he represent himself or have an attorney?\n")

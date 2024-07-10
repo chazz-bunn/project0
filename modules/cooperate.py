@@ -26,7 +26,7 @@ def func(dict):
     ]
     choice_two_choices = [
         "go easy",
-        "easy"
+        "easy",
         "lose",
         "lift its spirits",
         "lift",
@@ -35,8 +35,8 @@ def func(dict):
     while True:
         choice = input()
         if choice in choice_one_choices:
-            pass
+            return "school_this_fool"
         elif choice in choice_two_choices:
-            pass
+            return "go_easy_on_them"
         else:
             print_text("\nPick one of the choices.\nShould he win or go easy?\n")
