@@ -3,6 +3,8 @@ import modules
 
 class Game:
     game_dict = {}
+
+    #load game to file
     def load_game(self):
         with open("save.json") as jsonfile:
             self.game_dict = json.load(jsonfile)
@@ -10,34 +12,40 @@ class Game:
             return "prologue"
         return self.game_dict.get("current_module")
 
+    #save game to file
     def save_game(self, current_module):
         self.game_dict["current_module"] = current_module
         with open("save.json", "w") as jsonfile:
             json.dump(self.game_dict, jsonfile)
 
+    #Handle when a game ends, ask user whether they want to start a new adventure
+    def end_game(self):
+        print("\nNew Adventure: yes or no?")
+        while True:
+            choice = input()
+            if choice in ["yes", "y", "Yes", "YES"]:
+                return False
+            elif choice in ["no", "n", "No", "NO"]:
+                return True
+            else:
+                print("Input either yes or no")
+
+    #The main game loop it runs, loads, and saves modules
     def game_loop(self):
         current_module = self.load_game()
         while True:
+            #below is equivalent to: current_module = modules.module_name.func(game_dict)
+            #example: current_module = modules.prologue.func(game_dict)
             current_module = getattr(modules, current_module).func(self.game_dict)
             if current_module == "end":
                 modules.end.func()
                 current_module = "prologue"
-                print("\nNew Game: yes or no?")
-                break_flag = False
-                while True:
-                    choice = input()
-                    if choice in ["yes", "y", "Yes", "YES"]:
-                        break
-                    elif choice in ["no", "n", "No", "NO"]:
-                        break_flag = True
-                        break
-                    else:
-                        print("Input either yes or no")
-                if break_flag:
+                if self.end_game():
                     break
             self.save_game(current_module)
-        self.save_game(current_module)
     
+    #Handles game start up. Loads game from save and ask whether user wants to continue or start a new game. 
+    #Lastly it runs the main game loop method
     def game_start(self):
         current_module = self.load_game()
         if current_module != "prologue":

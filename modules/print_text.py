@@ -1,6 +1,7 @@
 import time
 import sys
 
+#Used to print one character at a time to the screen
 def print_text(text):
     ctr = 0
     for i in text:
