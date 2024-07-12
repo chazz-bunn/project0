@@ -6,7 +6,4 @@ Features:
 • Branching story paths, affected by the decisions you help Pete make.
 • 5 different endings. Can you help Pete make it out of the forest alive?
 • A save feature, so you can pick up where you left off
-• Endorsed by former president Barak Obama*
 • Guest stars famed musician Kenny Loggins
-
-*Allegedly
