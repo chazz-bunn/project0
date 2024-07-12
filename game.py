@@ -1,6 +1,15 @@
 import json
 import modules
 
+'''
+####################
+# Pete in Absentia #
+####################
+Written by Brent Bunn
+Programmed by Darryl Bunn
+'''
+
+
 class Game:
     game_dict = {}
 
